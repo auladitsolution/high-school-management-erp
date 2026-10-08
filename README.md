@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# অগ্রদূত আদর্শ উচ্চ বিদ্যালয় ব্যবস্থাপনা ইআরপি
+## Production-Ready Bangla High School Website & Management ERP
 
-## Getting Started
+বাংলাদেশের মাধ্যমিক বিদ্যালয় সমূহের (৬ষ্ঠ - ১০ম শ্রেণি এবং এসএসসি পরীক্ষা) জন্য একটি আধুনিক, স্বয়ংসম্পূর্ণ, দ্বৈত-সারফেস এবং অত্যন্ত নিরাপদ **ওয়েবসাইট ও স্কুল ম্যানেজমেন্ট ইআরপি (ERP) প্ল্যাটফর্ম**।
 
-First, run the development server:
+---
+
+### 🌟 প্রধান বৈশিষ্ট্যসমূহ (Key Highlights)
+
+1. **নকশা ও বাংলা টাইপোগ্রাফি**:
+   - সম্পূর্ণ দৃশ্যমান ইউজার ইন্টারফেস ও ফর্ম প্রাতিষ্ঠানিক বাংলায় লিখিত।
+   - গুগল ফন্ট **Hind Siliguri** (`next/font/google`) গ্লোবালি বাস্তবায়িত।
+   - বাংলা সংখ্যা (০-৯) রূপান্তর, বাংলা তারিখ এবং মুদ্রা ফরম্যাটিং (৳)।
+
+2. **পাবলিক স্কুল পোর্টাল (Public School Portal)**:
+   - হোমপেজ: ব্যানার, নোটিশ টিকার, প্রধান শিক্ষকের বাণী, পরিসংখ্যান ও দ্রুত অ্যাক্সেস লিংক।
+   - সম্পর্কিত পেইজসমূহ: বিদ্যালয় পরিচিতি (`/about`), নোটিশ বোর্ড (`/notices`), অনলাইন ভর্তি আবেদন (`/admissions`), ফলাফল ও মার্কশিট অনুসন্ধান (`/results`), ক্লাস ও পরীক্ষা রুটিন (`/routines`), এবং যোগাযোগ (`/contact`)।
+
+3. **সমন্বিত প্রশাসনিক ইআরপি (Administrative ERP)**:
+   - **ড্যাশবোর্ড**: শিক্ষার্থী, শিক্ষক, উপস্থিতি, ফি আদায়, বকেয়া এবং সাম্প্রতিক কার্যকলাপের রিয়েল-টাইম কেপিআই।
+   - **শিক্ষার্থী ব্যবস্থাপনা**: রোল ও শ্রেণি ভিত্তিক তালিকা, নতুন ভর্তি নিবন্ধন, এবং কিউআর কোড সম্বলিত ডিজিটাল স্টুডেন্ট আইডি কার্ড।
+   - **শিক্ষক ও স্টাফ**: বিষয় ও শ্রেণি শিক্ষক অ্যাসাইনমেন্ট এবং পদবীভিত্তিক ডিরেক্টরি।
+   - **দৈনিক হাজিরা**: উপস্থিতি, অনুপস্থিতি, বিলম্ব ও ছুটির লাইভ ট্র্যাকিং এবং উপস্থিতি শতকরা হার হিসাব।
+   - **পরীক্ষা ও ফলাফল**: লিখিত (৭০) ও এমসিকিউ (৩০) নম্বর এন্ট্রি, বাংলাদেশ শিক্ষা বোর্ডের স্ট্যান্ডার্ড জিপিএ (GPA 0.0 - 5.0) এবং লেটার গ্রেড (A+ থেকে F) হিসাব, এবং প্রিন্টযোগ্য অফিসিয়াল মার্কশিট।
+   - **ফি ও অর্থ ব্যবস্থাপনা**: ফ্লোটিং পয়েন্ট ত্রুটিমুক্ত ইন্টিজার পয়সা (Paisa) ভিত্তিক হিসাব, ইনভয়েস জেনারেশন এবং অফিসিয়াল মানি রিসিট।
+   - **অনলাইন ভর্তি পাইপলাইন**: নতুন আবেদন যাচাই, অনুমোদন ও স্বয়ংক্রিয় রোল বরাদ্দকরণ।
+   - **লাইব্রেরি**: বইয়ের ক্যাটালগ, ক্যাটাগরি, শেলফ অবস্থান ও ইস্যু ট্র্যাকিং।
+   - **রিপোর্ট ও এনালিটিক্স**: শ্রেণিভিত্তিক ও লিঙ্গভিত্তিক শিক্ষার্থী তালিকা, পাসের হার ও ডাউনলোডযোগ্য প্রতিবেদন।
+   - **বিদ্যালয় সেটিংস**: EIIN, বোর্ড কোড, লোগো, ঠিকানা ও প্রাতিষ্ঠানিক তথ্যাবলী।
+
+4. **গতিশীল ও রিভার্সিবল ডেমো মোড (Dynamic & Reversible Demo Mode)**:
+   - **কঠোর আইসোলেশন**: উৎপাদনমুখী প্রোডাকশন ডাটাবেজ (`MONGODB_URI`) এবং ডেমো ডাটাবেজ (`DEMO_DATABASE_URI`) সম্পূর্ণ পৃথক।
+   - **১-ক্লিক ডেমো লগইন**: অ্যাডমিন, প্রধান শিক্ষক, শ্রেণি শিক্ষক, শিক্ষার্থী, অভিভাবক, হিসাবরক্ষক ও লাইব্রেরিয়ান - এই ৭টি ডেমো রোলে পাসওয়ার্ড ছাড়াই প্রবেশের সুবিধা।
+   - **নিয়ন্ত্রিত রিসেট**: প্রশাসনিক অনুমোদন ও সিক্রেট টোকেন যাচাই সাপেক্ষে নিরাপদ ডেমো ডাটা রিসেট (`/dashboard/demo-reset`)। প্রোডাকশন মোডে রিসেট রুট সম্পূর্ণরূপে নিষিদ্ধ (403 Forbidden)।
+
+---
+
+### 🚀 লোকাল ডেভেলপমেন্ট সেটআপ (Local Development)
 
 ```bash
+# ডিপেনডেন্সি ইনস্টল
+npm install
+
+# ডেভেলপমেন্ট সার্ভার চালু (ডিফল্টভাবে ডেমো মোডে চলবে)
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ব্রাউজারে দেখুন:
+- পাবলিক পোর্টাল: `http://localhost:3000`
+- ইআরপি লগইন: `http://localhost:3000/login`
+- ড্যাশবোর্ড: `http://localhost:3000/dashboard`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🧪 টেস্ট ও মান যাচাই (Automated Verification)
 
-## Learn More
+```bash
+# কারেন্সি প্রিসিশন, বাংলা ডিজিট ও গ্রেডিং ক্যালকুলেশন টেস্ট
+npx tsx tests/run-tests.ts
 
-To learn more about Next.js, take a look at the following resources:
+# প্রোডাকশন বিল্ড যাচাই
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🌐 পরিবেশ ভেরিয়েবল নির্দেশিকা (Environment Variables)
 
-## Deploy on Vercel
+`.env.example` ফাইলটি দেখুন:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```env
+# Application Mode
+APP_MODE="demo"                        # 'production' অথবা 'demo'
+DEMO_MODE_ENABLED="true"                # 'true' অথবা 'false'
+NEXT_PUBLIC_DEMO_BANNER="true"          # ডেমো ব্যানার প্রদর্শন
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Database URIs
+MONGODB_URI="mongodb+srv://prod_user:...@cluster.mongodb.net/school_prod"
+DEMO_DATABASE_URI="mongodb+srv://demo_user:...@cluster.mongodb.net/school_demo"
+
+# Demo Reset Token
+DEMO_ALLOW_DATA_RESET="true"
+DEMO_RESET_TOKEN="demo-secret-token-bangla-erp-2026"
+
+# Session Secret
+SESSION_SECRET="super-secret-key-32-chars-long-bangla-school-erp"
+```
+
+---
+
+### ☁️ ভার্সেল ডিপ্লয়মেন্ট (Vercel Deployment)
+
+1. প্রজেক্টটি GitHub রিপোজিটরিতে পুশ করুন।
+2. Vercel Dashboard-এ প্রজেক্ট ইম্পোর্ট করুন।
+3. **Settings -> Environment Variables**-এ গিয়ে প্রোডাকশন ডাটাবেজের `MONGODB_URI`, `APP_MODE="production"`, `DEMO_MODE_ENABLED="false"`, এবং `SESSION_SECRET` সেট করুন।
+4. ডিপ্লয় বাটনে ক্লিক করুন।
